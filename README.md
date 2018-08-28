@@ -1,4 +1,5 @@
-# Vagrantを導入させます
+# Vagrantに仮想環境を構築します。
+- VagrantにLAMP環境を構築します。
 - 今回対象にしているのはホストのphpなどの版が開発環境にそぐわない場合です
 - わからくなった時点でpooh3に連絡してください
 - pooh3はにわかなのでわからなくなったら最初からの場合もあります
@@ -13,9 +14,10 @@
 
 
 ## 下記の順番に従って環境を作って、編集していってください
-1. __[vagrant環境の構築と起動](/vagrant/laravelを使えるvagrant環境の構築.md)__
-2. __【編集中】[vagrant環境内に各種ライブラリの追加とapacheの設定](/vagrant/vagrant環境内の各種ライブラリの追加とapacheの設定.md)__
-3. __[DetaBaseをmysql5.7へ変更と設定.md](/vagrant/DetaBaseをmysql5.7へ変更.md)__
+1. __【Linux】[vagrant環境の構築と起動](/vagrant/laravelを使えるvagrant環境の構築.md)__
+2. __【PHP】[環境内の各種ライブラリの追加とphpなどの設定](/vagrant/環境内の各種ライブラリの追加とphpなどの設定.md)__
+3. __【Apache】[Apacheとファイアウォールの設定](/vagrant/Apacheとファイアウォールの設定.md)__
+4. __【MySQL】[DetaBaseをmysql5.7へ変更と設定.md](/vagrant/DetaBaseをmysql5.7へ変更.md)__
 
 
 
