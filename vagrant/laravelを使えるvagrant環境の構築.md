@@ -13,6 +13,8 @@
 
 ## まずはitermを開いてください
 
+
+
 #### 1.任意の場所に移動する
 
 ```
@@ -92,9 +94,21 @@ the comments in the Vagrantfile as well as documentation on
 
 と出たら成功です
 
-#### 4.Vagrantfileの中身をコメントインします。
-わかりやすくするためにSublimeやvimなどのエディタを利用して３５行目の＃を削除してコメントインします
+#### 4.Vagrantfileの中身を２箇所コメントインします。
+わかりやすくするためにSublimeやvimなどのエディタを利用して２編集してください
 
+
+２６行目の＃を削除してコメントインします
+__変更前__
+```
+# config.vm.network "private_network", ip: "192.168.33.10"
+```
+__変更後__
+```
+ config.vm.network "forwarded_port", guest: 80, host: 8080
+```
+
+３５行目の＃を削除してコメントインします
 __変更前__
 ```
 # config.vm.network "private_network", ip: "192.168.33.10"
