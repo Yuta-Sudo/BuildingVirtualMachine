@@ -6,8 +6,8 @@
 - itermを使用して設定、利用して行きます
 - (ホストの環境が整っている場合の環境構築はは後日にあげます)
 - 某AKBサイゼ会代表(pee3)に感謝です
-
-
+- XAMPPなどを使うよりは為になると思うので、見るのではなくある程度理解してくださると嬉しいです
+- Pooh3も7~8割ほどしか理解していません
 # 今回の到達点
 - 仮想環境内にてクローンしてきたlaravel_projectを表示する
 - ゲストOS(以後:vagrant)とホストOS(ローカル:手元のMac)でフォルダを同期してホストでの編集、管理を実現
@@ -17,7 +17,7 @@
 1. __【Linux】[vagrant環境の構築と起動](/vagrant/laravelを使えるvagrant環境の構築.md)__
 2. __【PHP】[環境内の各種ライブラリの追加とphpなどの設定](/vagrant/環境内の各種ライブラリの追加とphpなどの設定.md)__
 3. __【Apache】[Apacheとファイアウォールの設定](/vagrant/Apacheとファイアウォールの設定.md)__
-4. __【MySQL】[DetaBaseをmysql5.7へ変更と設定.md](/vagrant/DetaBaseをmysql5.7へ変更.md)__
+4. __【MySQL】[DetaBaseをmysql5.7へ変更と設定](/vagrant/DetaBaseをmysql5.7へ変更.md)__
 
 
 
