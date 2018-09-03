@@ -16,7 +16,7 @@
 
 
 ## 下記の順番に従って環境を作って、編集していってください
-1. __【Linux】[vagrant環境の構築と起動](/vagrant/laravelを使えるvagrant環境の構築.md)__
+1. __【Linux】[vagrant環境の構築と起動](/vagrant/vagrantの立ち上げ.md)__
 2. __【PHP】[環境内の各種ライブラリの追加とphpなどの設定](/vagrant/環境内の各種ライブラリの追加とphpなどの設定.md)__
 3. __ 編集中【Apache】[Apacheとファイアウォールの設定](/vagrant/Apacheとファイアウォールの設定.md)__
 4. __【MySQL】[DetaBaseをmysql5.7へ変更と設定](/vagrant/DetaBaseをmysql5.7へ変更.md)__

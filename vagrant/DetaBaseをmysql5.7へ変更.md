@@ -11,6 +11,7 @@ CentOS7にインストールされているDBはmariaDBとなってます。　
 # まずはcentOSにmysqlのレポジトリRPMをインストールします。
 
 RPMとはあらかじめコンパイル済みのバイナリと、関連するファイル群
+
 　参考:「[Linuxの「パッケージ」と「yum」と「rpm」について勉強したのでまとめてみた。](https://qiita.com/sksmnagisa/items/05a6f8a707010b8bea56)」
 
 1. vagrant内にパッケージをダウンロードしてきます。
@@ -26,6 +27,7 @@ sudo yum localinstall mysql57-community-release-el7-7.noarch.rpm
 ```
 
 3. そこからMySQL本体をインストールします(時間かかります。)
+下記コマンド中に何回か許可を求められるので`y`と答えてください。
 ```
 [root@localhost vagrant]#
 sudo yum install mysql-community-server
@@ -53,11 +55,6 @@ sudo systemctl start mysqld
 以下のコマンドで確認できます。
 ```
 [root@localhost vagrant]#
-sudo grep 'temporary password' /var/log/mysqld.log
-```
-実行
-```
-vagrant@localhost ~]# 
 sudo grep 'temporary password' /var/log/mysqld.log
 ```
 結果(自分の場合)
@@ -109,3 +106,5 @@ set password = "新しく設定するパスワード";
 
 ## ここまででmysql(=DB)の設定は完了です
 これ以降のmysqlの使い方は各々調べてください。
+
+## [目次に戻る](/../README.md) 

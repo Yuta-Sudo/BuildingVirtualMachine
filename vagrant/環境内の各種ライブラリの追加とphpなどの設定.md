@@ -143,21 +143,22 @@ pwd
 この `/home/vagrant/プロジェクト名`はコピーしてメモか何かにペーストしてください。
 あとでホスト側でもpathを取り両方使います。
 
-5. `exit`、`exit`でvagrantから脱出しホスト(Mac)に戻って来てくださいてください。
+5. `exit`、`exit`でvagrantから脱出しホスト(Mac)に戻って来てください。
 
 6. ホスト(Mac)に戻って来たら`vagrant halt`でvagrantを停止させてください。
 
 # vagrantの同期機能を使う
 ここではvagrant内とホストOS(Mac)のディレクトリを同期させます。
 さて前回`exit`しホストに戻って来ました。
-1. `vagrant up`を行ったディレクトリに移動してください。(引き続き設定している人は無視してください)
+
+1. `vagrant up`を行ったディレクトリに戻って来ましたよね？
 
 2. 新しくディレクトリをプロジェクト名で作成してください。
 ```
 ~/Desktop/local
 mkdir プロジェクト名
 ```
-3. 作成したディレクトリにプロジェクトをクローンして来てください。
+3. 作成したディレクトリにプロジェクトをsorce tree などでクローンして来てください。
 ```図
   任意のフォルダ名 --- vagrantfile
                 --- 新しく作ったdir ⬅ここにクローン
@@ -165,13 +166,20 @@ mkdir プロジェクト名
 
 4. ターミナルでクローンして来たディレクトリまで行きpwdで場所を確認してください。
 ```例
-~/Desktop/local/KAMI_NEW master
+~/Desktop/local/
+cd プロジェクト名
+
+~/Desktop/local/プロジェクト
 $ pwd
-/Users/yuta/Desktop/local/KAMI_NEW
+/Users/yuta/Desktop/local/プロジェクト
 ```
 こちらでもpathは先ほど同様、必ずコピーしメモか何かにペーストしておいてください。
 
-5. 完了しましたら元のagrantfileがあるディレクトリまでもどります。
+5. 完了しましたら元のvagrantfileがあるディレクトリまでもどります。
+```
+~/Desktop/local/プロジェクト
+cd ../
+```
 
 6. Vagrantfile内の４６行目をコメントインして編集して保存してください。
 変更前
@@ -198,7 +206,7 @@ ls
 ```
 おそらく同期しているはずです。
 
-8. 確認ができたらそのプロジェクトのディレクトリでvendorを作成します。
+8. 確認ができたらvagrant 内のプロジェクトのディレクトリでvendorを作成します。
 ```
 [vagrant@プロジェクト名 ~]# 
 composer install
@@ -217,105 +225,9 @@ cp .env.example .env
 php artisan key:generate
 ```
 
+ファイルの同期、laravelの実装は完了したはずです。
+しかし、今のままでは表示ができません。
 
+## 次のチャプターで表示まで終わらせます
 
-firewallの際
-$ yum update 
-時間がかかります。
-
-[vagrant@localhost ~]$ exit
-ログアウト
-
-~/Documents/kami1 
-$ vagrant reload
-
-sudo systemctl start firewalld
-
-sudo firewall-cmd --add-service=http --zone=public --permanent
-
-sudo firewall-cmd --reload
-
-❯ cp -p .env.example .env
- 
-~/Documents/kami1/kami master*
-❯ php artisan key:generate
-Application key [意味のない文字列] set successfully.
-
-
-app
-artisan
-bootstrap
-composer.json
-composer.lock
-config
-database
-package.json
-phpunit.xml
-public
-readme.md
-resources
-routes
-server.php
-storage
-tests
-vendor
-webpack.mix.js
-
-
-/Users/yuta/Documents/test
-
-
-,
-   type: "rsync",
-   owner: "vagrant",
-   group: "vagrant"
-   rsync__exclude: [".git", ".gitignore", "tmp", "log", "cache"],
-   rsync__chown: false
-
-
-
-   ❯ vagrant up
-Bringing machine 'default' up with 'virtualbox' provider...
-==> default: Clearing any previously set forwarded ports...
-==> default: Clearing any previously set network interfaces...
-==> default: Preparing network interfaces based on configuration...
-    default: Adapter 1: nat
-    default: Adapter 2: hostonly
-==> default: Forwarding ports...
-    default: 22 (guest) => 2222 (host) (adapter 1)
-==> default: Booting VM...
-==> default: Waiting for machine to boot. This may take a few minutes...
-    default: SSH address: 127.0.0.1:2222
-    default: SSH username: vagrant
-    default: SSH auth method: private key
-    default: Warning: Connection reset. Retrying...
-    default: Warning: Remote connection disconnect. Retrying...
-    default: Warning: Connection reset. Retrying...
-    default: Warning: Remote connection disconnect. Retrying...
-    default: Warning: Connection reset. Retrying...
-    default: Warning: Remote connection disconnect. Retrying...
-    default: Warning: Connection reset. Retrying...
-==> default: Machine booted and ready!
-==> default: Checking for guest additions in VM...
-    default: The guest additions on this VM do not match the installed version of
-    default: VirtualBox! In most cases this is fine, but in rare cases it can
-    default: prevent things such as shared folders from working properly. If you see
-    default: shared folder errors, please make sure the guest additions within the
-    default: virtual machine match the version of VirtualBox you have installed on
-    default: your host and reload your VM.
-    default:
-    default: Guest Additions Version: 4.3.30
-    default: VirtualBox Version: 5.2
-==> default: Configuring and enabling network interfaces...
-    default: SSH address: 127.0.0.1:2222
-    default: SSH username: vagrant
-    default: SSH auth method: private key
-==> default: Mounting shared folders...
-    default: /vagrant => /Users/yuta/Documents/test
-==> default: Machine already provisioned. Run `vagrant provision` or use the `--provision`
-
-
-sudo /etc/init.d/vboxadd setup
-
-
-
+## [目次に戻る](/../README.md) 
